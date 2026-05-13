@@ -45,15 +45,12 @@ import orderRoutes from "./routes/orderRoutes.js";
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "https://kaleemfront.cck.edu.pk",
-    "http://kaleemfront.cck.edu.pk"
-  ],
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+// app.use(cors({
+//   origin: "http://localhost:3000"
+// }));
+
+app.use(cors())
+
 
 app.use(express.json());
 
